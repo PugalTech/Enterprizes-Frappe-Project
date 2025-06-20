@@ -1,0 +1,263 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-02-24 22:19:42.528171",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_xjlf",
+  "company",
+  "column_break_vjvq",
+  "date",
+  "column_break_mqgx",
+  "fy",
+  "section_break_lgxg",
+  "job_order_no",
+  "process_name",
+  "product",
+  "column_break_jgkt",
+  "customer",
+  "final_process",
+  "product_type",
+  "column_break_61wx",
+  "job_crd_date",
+  "warehouse",
+  "brand",
+  "load_prod_qty",
+  "load_details",
+  "column_break_cben",
+  "buyer_po_no",
+  "enquiry_no",
+  "section_break_rlql",
+  "details",
+  "section_break_zgzp",
+  "total_qty",
+  "operator",
+  "helper",
+  "dc_status",
+  "column_break_enww"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PRO.-.###",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xjlf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vjvq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mqgx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "company.cur_fy",
+   "fieldname": "fy",
+   "fieldtype": "Data",
+   "label": "Financial Year",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_lgxg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_order_no",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Job Card No",
+   "options": "Job Card",
+   "reqd": 1
+  },
+  {
+   "fieldname": "process_name",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Process Name",
+   "options": "Process",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "job_order_no.product",
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "label": "Product",
+   "options": "Products"
+  },
+  {
+   "fieldname": "column_break_jgkt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_order_no.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "default": "No",
+   "fieldname": "final_process",
+   "fieldtype": "Select",
+   "label": "Final Process",
+   "options": "No\nYes",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "product.product_type",
+   "fieldname": "product_type",
+   "fieldtype": "Link",
+   "label": "Product Type",
+   "options": "Product Type"
+  },
+  {
+   "fieldname": "column_break_61wx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_order_no.date",
+   "fieldname": "job_crd_date",
+   "fieldtype": "Date",
+   "label": "Job Card Date",
+   "read_only": 1
+  },
+  {
+   "default": "JK STORES",
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "product.brand",
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Brand"
+  },
+  {
+   "fieldname": "load_prod_qty",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Load"
+  },
+  {
+   "fieldname": "load_details",
+   "fieldtype": "Button",
+   "label": "Load Details"
+  },
+  {
+   "fieldname": "column_break_cben",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_order_no.buyer_po_no",
+   "fieldname": "buyer_po_no",
+   "fieldtype": "Data",
+   "label": "Buyer PO No"
+  },
+  {
+   "fetch_from": "job_order_no.enquiry_no",
+   "fieldname": "enquiry_no",
+   "fieldtype": "Link",
+   "label": "Enquiry No",
+   "options": "Enquiry"
+  },
+  {
+   "fieldname": "section_break_rlql",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "Production Details"
+  },
+  {
+   "fieldname": "section_break_zgzp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "operator",
+   "fieldtype": "Link",
+   "label": "Operator",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "helper",
+   "fieldtype": "Link",
+   "label": "Helper",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "dc_status",
+   "fieldtype": "Select",
+   "label": "DC Status",
+   "options": "\nDC Pending\nDC Completed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_enww",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-24 22:19:42.528171",
+ "modified_by": "Administrator",
+ "module": "Transaction",
+ "name": "Production",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

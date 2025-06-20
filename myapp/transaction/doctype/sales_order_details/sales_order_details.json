@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-24 21:57:34.101246",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "product",
+  "product_type",
+  "brand",
+  "style",
+  "colour",
+  "size",
+  "met_size",
+  "hsncode",
+  "qty",
+  "rate",
+  "amount",
+  "discount",
+  "after_dis_amt",
+  "gst_per"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Product",
+   "options": "Products"
+  },
+  {
+   "fieldname": "product_type",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Product Type",
+   "options": "Product Type"
+  },
+  {
+   "columns": 1,
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Brand",
+   "options": "Brand"
+  },
+  {
+   "fieldname": "style",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Style",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "colour",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Colour",
+   "options": "Colour",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "size",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Size",
+   "options": "Size",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "met_size",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Met Size"
+  },
+  {
+   "fieldname": "hsncode",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "HSN Code"
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "precision": "0",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "columns": 1,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "columns": 1,
+   "fieldname": "discount",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Discount"
+  },
+  {
+   "columns": 1,
+   "fieldname": "after_dis_amt",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "After Discount Amount"
+  },
+  {
+   "fieldname": "gst_per",
+   "fieldtype": "Percent",
+   "label": "Gst Per"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-24 21:57:34.101246",
+ "modified_by": "Administrator",
+ "module": "Transaction",
+ "name": "Sales Order Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

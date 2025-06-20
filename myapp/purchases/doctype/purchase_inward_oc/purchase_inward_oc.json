@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-24 21:18:42.879504",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ledger",
+  "rate",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "ledger",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Ledger",
+   "options": "Ledger"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-24 21:18:42.879504",
+ "modified_by": "Administrator",
+ "module": "Purchases",
+ "name": "Purchase Inward OC",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

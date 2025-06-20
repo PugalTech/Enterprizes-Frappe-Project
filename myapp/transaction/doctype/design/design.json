@@ -1,0 +1,245 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2025-02-24 21:37:40.733574",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_hsen",
+  "company",
+  "column_break_fx3m",
+  "date",
+  "column_break_e4q9",
+  "fy",
+  "section_break_c0by",
+  "customer",
+  "style",
+  "product",
+  "column_break_hkdj",
+  "enquiry_no",
+  "product_type",
+  "column_break_pdxa",
+  "ref_no",
+  "brand",
+  "column_break_swfy",
+  "type",
+  "section_break_0rtk",
+  "deatils",
+  "sales_order_status",
+  "section_break_1vmp",
+  "image1",
+  "image_view1",
+  "column_break_asnl",
+  "image2",
+  "image_view2",
+  "column_break_6dxo",
+  "image3",
+  "image_view3"
+ ],
+ "fields": [
+  {
+   "default": "DG24.-.###",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "DGN.-.###\nDG24.-.###",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hsen",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Magizh Enterprize",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fx3m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_e4q9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "company.cur_fy",
+   "fieldname": "fy",
+   "fieldtype": "Data",
+   "label": "Financial Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_c0by",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "style",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Style"
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "label": "Product",
+   "options": "Products",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hkdj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enquiry_no",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Enquiry No",
+   "options": "Enquiry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "product_type",
+   "fieldtype": "Data",
+   "label": "Product Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pdxa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "label": "Ref No"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Brand",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_swfy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Sample\nBulk\nLayout"
+  },
+  {
+   "fieldname": "section_break_0rtk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "deatils",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "Design Details"
+  },
+  {
+   "default": "Sales Order Pending",
+   "fieldname": "sales_order_status",
+   "fieldtype": "Select",
+   "label": "Sales Order Status",
+   "options": "Sales Order Pending\nSales Order Completed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_1vmp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach",
+   "label": "Image 1"
+  },
+  {
+   "fieldname": "image_view1",
+   "fieldtype": "Image",
+   "label": "Image View 1",
+   "options": "image1"
+  },
+  {
+   "fieldname": "column_break_asnl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image2",
+   "fieldtype": "Attach",
+   "label": "Image 2"
+  },
+  {
+   "fieldname": "image_view2",
+   "fieldtype": "Image",
+   "label": "Image View 2",
+   "options": "image2"
+  },
+  {
+   "fieldname": "column_break_6dxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image3",
+   "fieldtype": "Attach",
+   "label": "Image 3"
+  },
+  {
+   "fieldname": "image_view3",
+   "fieldtype": "Image",
+   "label": "Image View 3",
+   "options": "image3"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-28 13:16:27.230906",
+ "modified_by": "Administrator",
+ "module": "Transaction",
+ "name": "Design",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-24 21:19:28.194304",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "style",
+  "item_group",
+  "item",
+  "colour",
+  "size",
+  "gsm",
+  "qty",
+  "rate",
+  "amount",
+  "gst_per"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "style",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Style"
+  },
+  {
+   "columns": 1,
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "columns": 1,
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "columns": 1,
+   "fieldname": "colour",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Colour",
+   "options": "Colour"
+  },
+  {
+   "columns": 1,
+   "fieldname": "size",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Size",
+   "options": "Size"
+  },
+  {
+   "columns": 1,
+   "fieldname": "gsm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Gsm"
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "default": "0",
+   "fetch_from": "item.gst",
+   "fieldname": "gst_per",
+   "fieldtype": "Float",
+   "label": "Gst Per"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-24 21:19:28.194304",
+ "modified_by": "Administrator",
+ "module": "Purchases",
+ "name": "Purchase Inward Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

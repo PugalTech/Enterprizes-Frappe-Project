@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-24 21:11:17.879785",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gst",
+  "rate",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "gst",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "GST%",
+   "options": "Ledger"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-24 21:11:17.879785",
+ "modified_by": "Administrator",
+ "module": "Purchases",
+ "name": "Purchase Order Tax Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

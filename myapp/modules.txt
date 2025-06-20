@@ -1,1 +1,4 @@
 Myapp
+Masters
+Purchases
+Transaction

@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-24 21:14:08.775993",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "style",
+  "product_type",
+  "product",
+  "item_group",
+  "item",
+  "colour",
+  "size",
+  "met_size",
+  "uom",
+  "gsm",
+  "qty",
+  "gst_per",
+  "rate",
+  "amount"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "style",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Style"
+  },
+  {
+   "columns": 1,
+   "fieldname": "product_type",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Product Type",
+   "options": "Product Type"
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Product",
+   "options": "Products"
+  },
+  {
+   "columns": 1,
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "columns": 1,
+   "fieldname": "colour",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Colour",
+   "options": "Colour"
+  },
+  {
+   "columns": 1,
+   "fieldname": "size",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Size",
+   "options": "Size"
+  },
+  {
+   "columns": 1,
+   "fieldname": "met_size",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Met Size"
+  },
+  {
+   "columns": 1,
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UOM"
+  },
+  {
+   "columns": 1,
+   "fieldname": "gsm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Gsm"
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "item.gst",
+   "fieldname": "gst_per",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Gst Per"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-24 21:14:08.775993",
+ "modified_by": "Administrator",
+ "module": "Purchases",
+ "name": "Purchase Order Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

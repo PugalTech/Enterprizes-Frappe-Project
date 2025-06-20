@@ -1,0 +1,221 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-02-24 21:21:23.585448",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_ys5m",
+  "company",
+  "column_break_f7wd",
+  "date",
+  "column_break_nvsz",
+  "fy",
+  "section_break_9hxr",
+  "po_no",
+  "warehouse",
+  "column_break_b6j5",
+  "supplier",
+  "section_break_ethd",
+  "details",
+  "section_break_flhd",
+  "total_qty",
+  "column_break_awkz",
+  "total_amt",
+  "section_break_gr9m",
+  "remarks",
+  "po_status",
+  "column_break_35wn",
+  "oc_details",
+  "tax_details",
+  "sub_total",
+  "round_off",
+  "grand_total",
+  "section_break_4hut",
+  "tax_cate"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PI.-.###"
+  },
+  {
+   "fieldname": "column_break_ys5m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_f7wd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_nvsz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "company.cur_fy",
+   "fieldname": "fy",
+   "fieldtype": "Data",
+   "label": "Financial Year"
+  },
+  {
+   "fieldname": "section_break_9hxr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "po_no",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "PO No",
+   "options": "Purchase Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_b6j5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "po_no.supplier",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ethd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "Purchase Inward Details"
+  },
+  {
+   "fieldname": "section_break_flhd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "column_break_awkz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amt",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "section_break_gr9m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "default": "0",
+   "fieldname": "po_status",
+   "fieldtype": "Check",
+   "label": "PO Completed"
+  },
+  {
+   "fieldname": "column_break_35wn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "oc_details",
+   "fieldtype": "Table",
+   "label": "Other Charges Details",
+   "options": "Purchase Inward OC"
+  },
+  {
+   "fieldname": "tax_details",
+   "fieldtype": "Table",
+   "label": "Tax Details",
+   "options": "Purchase Inward Tax Details"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total"
+  },
+  {
+   "fieldname": "round_off",
+   "fieldtype": "Currency",
+   "label": "Round Off"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total"
+  },
+  {
+   "fieldname": "section_break_4hut",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fetch_from": "supplier.gst_category",
+   "fieldname": "tax_cate",
+   "fieldtype": "Data",
+   "label": "Tax Cate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-24 21:21:23.585448",
+ "modified_by": "Administrator",
+ "module": "Purchases",
+ "name": "Purchase Inwards",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

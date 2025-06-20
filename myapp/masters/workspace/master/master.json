@@ -1,0 +1,141 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"_tEEA2oMKM\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Master</span>\",\"col\":12}},{\"id\":\"SV7h9KgUYV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Company\",\"col\":3}},{\"id\":\"wikILRXofW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Supplier\",\"col\":3}},{\"id\":\"JVQxVj2dr3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"aA8FhMGhRU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product Type\",\"col\":3}},{\"id\":\"TDRtqc4GXQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Colour\",\"col\":3}},{\"id\":\"64jbET_t6D\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Size\",\"col\":3}},{\"id\":\"rrxNLG6M1P\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product\",\"col\":3}},{\"id\":\"wuNG9aRYqJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ledger\",\"col\":3}},{\"id\":\"k8vvOW6Wtc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Process\",\"col\":3}},{\"id\":\"14No6kry8o\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"zAL1kVVeqh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item Group\",\"col\":3}},{\"id\":\"1kZjwhYkVG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"UOM\",\"col\":3}},{\"id\":\"tKI2xyQux6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Warehouse\",\"col\":3}},{\"id\":\"NYdxLFZMf1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":3}}]",
+ "creation": "2025-02-16 17:13:47.643577",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Master",
+ "links": [],
+ "modified": "2025-02-24 23:35:36.691922",
+ "modified_by": "Administrator",
+ "module": "Masters",
+ "name": "Master",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Company",
+   "link_to": "Company",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Supplier",
+   "link_to": "Supplier",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Customer",
+   "link_to": "Customer",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Product Type",
+   "link_to": "Product Type",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Colour",
+   "link_to": "Colour",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Size",
+   "link_to": "Size",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Product",
+   "link_to": "Products",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Ledger",
+   "link_to": "Ledger",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Process",
+   "link_to": "Process",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Item",
+   "link_to": "Item",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Item Group",
+   "link_to": "Item Group",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "UOM",
+   "link_to": "UOM",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Warehouse",
+   "link_to": "Warehouse",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee",
+   "link_to": "Employee",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Master"
+}

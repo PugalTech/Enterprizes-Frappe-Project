@@ -1,0 +1,438 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2025-02-24 22:00:53.216531",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_lgrz",
+  "company",
+  "column_break_yzke",
+  "date",
+  "column_break_4hfj",
+  "fy",
+  "section_break_ldrz",
+  "customer",
+  "ord_no",
+  "delivery_date",
+  "hsn_code",
+  "consignee",
+  "column_break_uu8j",
+  "design_no",
+  "enquiry_no",
+  "product",
+  "gst",
+  "bill_address",
+  "column_break_dhla",
+  "order_no",
+  "product_type",
+  "ship_address",
+  "column_break_7emq",
+  "type",
+  "brand",
+  "discount",
+  "rate",
+  "employee",
+  "designation",
+  "section_break_24ma",
+  "deatils",
+  "section_break_5rap",
+  "job_card_status",
+  "column_break_25pa",
+  "total_qty",
+  "column_break_2r53",
+  "total_amount",
+  "column_break_vfd3",
+  "total_dis_amt",
+  "section_break_dq27",
+  "column_break_lsej",
+  "remarks",
+  "column_break_tjtl",
+  "other_charges",
+  "tax_details",
+  "sub_total",
+  "round_off",
+  "grand_total",
+  "tax_cat",
+  "section_break_rfvg",
+  "image1",
+  "image_view1",
+  "column_break_tvuh",
+  "image2",
+  "image_view2",
+  "column_break_9fog",
+  "image3",
+  "image_view3",
+  "tax_cate"
+ ],
+ "fields": [
+  {
+   "default": "SO.-.###",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "SO.-.###",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lgrz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Magizh Enterprize",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yzke",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4hfj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "company.cur_fy",
+   "fieldname": "fy",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Financial Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ldrz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ord_no",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Order No"
+  },
+  {
+   "default": "Today",
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date"
+  },
+  {
+   "fetch_from": "product.hsn",
+   "fieldname": "hsn_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "HSN Code"
+  },
+  {
+   "fieldname": "consignee",
+   "fieldtype": "Link",
+   "label": "Consignee",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_uu8j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "design_no",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Design No",
+   "options": "Design"
+  },
+  {
+   "fieldname": "enquiry_no",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Enquiry No",
+   "options": "Enquiry"
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "label": "Product",
+   "options": "Products",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "product.gst_per",
+   "fieldname": "gst",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Gst"
+  },
+  {
+   "fieldname": "bill_address",
+   "fieldtype": "Small Text",
+   "label": "Billing Address"
+  },
+  {
+   "fieldname": "column_break_dhla",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "order_no",
+   "fieldtype": "Data",
+   "label": "Buyer PO No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "product_type",
+   "fieldtype": "Link",
+   "label": "Product Type",
+   "options": "Product Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ship_address",
+   "fieldtype": "Small Text",
+   "label": "Shipping Address"
+  },
+  {
+   "fieldname": "column_break_7emq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Sample\nBulk\nLayout"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Brand",
+   "reqd": 1
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Percent",
+   "label": "Discount"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.emp_code",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Emp Code"
+  },
+  {
+   "fieldname": "section_break_24ma",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "deatils",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "Sales Order Details"
+  },
+  {
+   "fieldname": "section_break_5rap",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Job Card Pending",
+   "fieldname": "job_card_status",
+   "fieldtype": "Select",
+   "label": "Job Card Status",
+   "options": "Job Card Pending\nJob Card Completed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_25pa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2r53",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vfd3",
+   "fieldtype": "Column Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "total_dis_amt",
+   "fieldtype": "Currency",
+   "label": "Total After Dis Amt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_dq27",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lsej",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_tjtl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_charges",
+   "fieldtype": "Table",
+   "label": "Other Charges",
+   "options": "Other Charges"
+  },
+  {
+   "fieldname": "tax_details",
+   "fieldtype": "Table",
+   "label": "Tax Details",
+   "options": "Sales Order Tax Details"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "round_off",
+   "fieldtype": "Currency",
+   "label": "Round Off ",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.tax_cat",
+   "fieldname": "tax_cat",
+   "fieldtype": "Data",
+   "label": "Tax Cat"
+  },
+  {
+   "fieldname": "section_break_rfvg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach",
+   "label": "Image 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "image_view1",
+   "fieldtype": "Image",
+   "label": "Image View 1",
+   "options": "image1"
+  },
+  {
+   "fieldname": "column_break_tvuh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image2",
+   "fieldtype": "Attach",
+   "label": "Image 2"
+  },
+  {
+   "fieldname": "image_view2",
+   "fieldtype": "Image",
+   "label": "Image View 2",
+   "options": "image2"
+  },
+  {
+   "fieldname": "column_break_9fog",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image3",
+   "fieldtype": "Attach",
+   "label": "Image 3"
+  },
+  {
+   "fieldname": "image_view3",
+   "fieldtype": "Image",
+   "label": "Image View 3",
+   "options": "image3"
+  },
+  {
+   "fetch_from": "customer.tax_cat",
+   "fieldname": "tax_cate",
+   "fieldtype": "Data",
+   "label": "Tax Cate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-28 14:37:00.914063",
+ "modified_by": "Administrator",
+ "module": "Transaction",
+ "name": "Sales Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

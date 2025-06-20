@@ -1,0 +1,819 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2025-02-24 22:49:05.459961",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_bpfj",
+  "company",
+  "column_break_3ipx",
+  "date",
+  "column_break_nkbb",
+  "fy",
+  "section_break_hz4x",
+  "customer",
+  "dc_no",
+  "load",
+  "dc_no1",
+  "ref_date",
+  "employee_name",
+  "mobile",
+  "email",
+  "e_waybill_required",
+  "column_break_uze0",
+  "consignee",
+  "dc_date",
+  "discount",
+  "enquiry_no",
+  "buyer_order_no",
+  "generate_einvoice",
+  "cancel_einvoice",
+  "column_break_m0o7",
+  "job_card_no",
+  "sale_ord_no",
+  "ref_no",
+  "shipping_address",
+  "employee",
+  "designation",
+  "section_break_1bpz",
+  "product",
+  "gst_per",
+  "column_break_psqb",
+  "product_type",
+  "column_break_1frp",
+  "brand",
+  "column_break_bd0j",
+  "uom",
+  "section_break_08ox",
+  "details",
+  "section_break_qnbs",
+  "amount_1",
+  "amount",
+  "dispatched_through",
+  "destination",
+  "dispatch_no",
+  "delivery_note_date",
+  "terms_payment",
+  "terms_of_delivery",
+  "column_break_mz21",
+  "total_disc_amt",
+  "total_qty",
+  "total_tax",
+  "oc_details",
+  "tax_details",
+  "sub_total",
+  "round_off",
+  "total_amount",
+  "tax_cat",
+  "transporter_info",
+  "transporter_name",
+  "gst",
+  "mode_of_transport",
+  "lr_no",
+  "column_break_vz8w",
+  "vehicle_no",
+  "distance",
+  "lr_date",
+  "e_invoice_details_section",
+  "irn",
+  "ack_no",
+  "ack_date",
+  "eway_bill_no",
+  "eway_bill_date",
+  "irn_cancelled",
+  "irn_cancel_date",
+  "qr_code",
+  "column_break_kbsi",
+  "signed_einvoice",
+  "eway_bill_validity",
+  "eway_bill_cancelled1",
+  "einvoice_status",
+  "einvoice",
+  "qrcode_image",
+  "failure_description",
+  "address_details_section",
+  "cy_address1",
+  "cy_address2",
+  "cy_city",
+  "cy_pincode",
+  "cy_phone",
+  "cy_email",
+  "com_gstin",
+  "com_statecode",
+  "com_rev_charge",
+  "column_break_plil",
+  "cr_address1",
+  "cr_address2",
+  "cr_city",
+  "cr_pincode",
+  "cr_phone",
+  "cr_email",
+  "cr_gstin",
+  "com_gst_cat",
+  "cr_statecode",
+  "column_break_uuhb",
+  "ce_address1",
+  "ce_address2",
+  "ce_city",
+  "ce_pincode",
+  "ce_phone",
+  "ce_email",
+  "ce_gstin",
+  "ce_statecode",
+  "lr_status",
+  "rdc_add_city",
+  "section_break_zndo",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "default": "INV.-.24-25.-.",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "INV.-.24-25.-.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bpfj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "J.K.ENTERPRISES",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3ipx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nkbb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "company.cur_fy",
+   "fieldname": "fy",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Financial Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_hz4x",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "job_card_no.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dc_no",
+   "fieldtype": "Table MultiSelect",
+   "label": "Dc No",
+   "options": "Delivery No Details"
+  },
+  {
+   "fieldname": "load",
+   "fieldtype": "Button",
+   "label": "Load"
+  },
+  {
+   "fieldname": "dc_no1",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Dc No",
+   "options": "Delivery"
+  },
+  {
+   "fieldname": "ref_date",
+   "fieldtype": "Date",
+   "label": "Ref Date"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "label": "Employee Name",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_name.mobile",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Mobile"
+  },
+  {
+   "fetch_from": "employee_name.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Email"
+  },
+  {
+   "default": "0",
+   "fieldname": "e_waybill_required",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "E-Way Bill Required"
+  },
+  {
+   "fieldname": "column_break_uze0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_card_no.customer",
+   "fieldname": "consignee",
+   "fieldtype": "Link",
+   "label": "Consignee",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dc_date",
+   "fieldtype": "Date",
+   "label": "Dc Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Data",
+   "label": "Discount %"
+  },
+  {
+   "fetch_from": "job_card_no.enquiry_no",
+   "fieldname": "enquiry_no",
+   "fieldtype": "Link",
+   "label": "Enquiry No",
+   "options": "Enquiry"
+  },
+  {
+   "fetch_from": "job_card_no.buyer_po_no",
+   "fieldname": "buyer_order_no",
+   "fieldtype": "Data",
+   "label": "Buyer Order No"
+  },
+  {
+   "fieldname": "generate_einvoice",
+   "fieldtype": "Button",
+   "label": "Generate EInvoice",
+   "options": "generate_irn"
+  },
+  {
+   "fieldname": "cancel_einvoice",
+   "fieldtype": "Button",
+   "label": "Cancel EInvoice",
+   "options": "cancel_generate_irn"
+  },
+  {
+   "fieldname": "column_break_m0o7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_card_no",
+   "fieldtype": "Link",
+   "label": "Job Card No",
+   "options": "Job Card"
+  },
+  {
+   "fetch_from": "job_card_no.order_no",
+   "fieldname": "sale_ord_no",
+   "fieldtype": "Link",
+   "label": "Sales Order No",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "label": "Ref No"
+  },
+  {
+   "fieldname": "shipping_address",
+   "fieldtype": "Small Text",
+   "label": "Shipping Address"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee.emp_code",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Emp Code"
+  },
+  {
+   "fieldname": "section_break_1bpz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "label": "Product",
+   "options": "Products",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "product.gst_per",
+   "fieldname": "gst_per",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Gst Per",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_psqb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "product_type",
+   "fieldtype": "Link",
+   "label": "Product Type",
+   "options": "Product Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1frp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Brand",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bd0j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "section_break_08ox",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "Invoice Details"
+  },
+  {
+   "fieldname": "section_break_qnbs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amount_1",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "After Discount Amount"
+  },
+  {
+   "fieldname": "dispatched_through",
+   "fieldtype": "Data",
+   "label": "Dispatched Through"
+  },
+  {
+   "fieldname": "destination",
+   "fieldtype": "Data",
+   "label": "Destination"
+  },
+  {
+   "fieldname": "dispatch_no",
+   "fieldtype": "Data",
+   "label": "Dispatch Doc No"
+  },
+  {
+   "fieldname": "delivery_note_date",
+   "fieldtype": "Date",
+   "label": "Delivery Note Date"
+  },
+  {
+   "fieldname": "terms_payment",
+   "fieldtype": "Data",
+   "label": "Mode/Terms Of Payment"
+  },
+  {
+   "fieldname": "terms_of_delivery",
+   "fieldtype": "Data",
+   "label": "Terms of Delivery"
+  },
+  {
+   "fieldname": "column_break_mz21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_disc_amt",
+   "fieldtype": "Data",
+   "label": "Total Discount Amount"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "total_tax",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Total Tax "
+  },
+  {
+   "fieldname": "oc_details",
+   "fieldtype": "Table",
+   "label": "Other Charges",
+   "options": "Invoice Other Charges"
+  },
+  {
+   "fieldname": "tax_details",
+   "fieldtype": "Table",
+   "label": "Tax Details",
+   "options": "Invoice Tax Details"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total"
+  },
+  {
+   "fieldname": "round_off",
+   "fieldtype": "Currency",
+   "label": "Round Off"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fetch_from": "customer.tax_cat",
+   "fieldname": "tax_cat",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Tax Cat"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "transporter_info",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Transporter Info"
+  },
+  {
+   "fieldname": "transporter_name",
+   "fieldtype": "Link",
+   "label": "Transporter Name",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "transporter_name.gstin",
+   "fieldname": "gst",
+   "fieldtype": "Data",
+   "label": "GST",
+   "translatable": 1
+  },
+  {
+   "fieldname": "mode_of_transport",
+   "fieldtype": "Select",
+   "label": "Mode of Transport",
+   "options": "\nRoad\nAir\nRail\nShip",
+   "translatable": 1
+  },
+  {
+   "fieldname": "lr_no",
+   "fieldtype": "Data",
+   "label": "LR No"
+  },
+  {
+   "fieldname": "column_break_vz8w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle No",
+   "translatable": 1
+  },
+  {
+   "fieldname": "distance",
+   "fieldtype": "Data",
+   "label": "Distance",
+   "translatable": 1
+  },
+  {
+   "fieldname": "lr_date",
+   "fieldtype": "Date",
+   "label": "LR Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "e_invoice_details_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "E Invoice Details"
+  },
+  {
+   "fieldname": "irn",
+   "fieldtype": "Data",
+   "label": "IRN"
+  },
+  {
+   "fieldname": "ack_no",
+   "fieldtype": "Data",
+   "label": "Ack no"
+  },
+  {
+   "fieldname": "ack_date",
+   "fieldtype": "Data",
+   "label": "Ack Date"
+  },
+  {
+   "fieldname": "eway_bill_no",
+   "fieldtype": "Data",
+   "label": "EWay Bill No"
+  },
+  {
+   "fieldname": "eway_bill_date",
+   "fieldtype": "Data",
+   "label": "EWay Bill Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "irn_cancelled",
+   "fieldtype": "Check",
+   "label": "IRN Cancelled"
+  },
+  {
+   "fieldname": "irn_cancel_date",
+   "fieldtype": "Datetime",
+   "label": "IRN Cancel Date"
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "QR Code"
+  },
+  {
+   "fieldname": "column_break_kbsi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signed_einvoice",
+   "fieldtype": "Code",
+   "label": "Signed E-Invoice"
+  },
+  {
+   "fieldname": "eway_bill_validity",
+   "fieldtype": "Datetime",
+   "label": "E Way Bill Validility"
+  },
+  {
+   "default": "0",
+   "fieldname": "eway_bill_cancelled1",
+   "fieldtype": "Check",
+   "label": "Eway Bill Cancelled"
+  },
+  {
+   "fieldname": "einvoice_status",
+   "fieldtype": "Data",
+   "label": "E Invoice Status"
+  },
+  {
+   "fieldname": "einvoice",
+   "fieldtype": "Code",
+   "hidden": 1,
+   "label": "E Invoice"
+  },
+  {
+   "fieldname": "qrcode_image",
+   "fieldtype": "Attach Image",
+   "label": "QR code"
+  },
+  {
+   "fieldname": "failure_description",
+   "fieldtype": "Data",
+   "label": "Failure Description"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "address_details_section",
+   "fieldtype": "Section Break",
+   "label": "Address Details"
+  },
+  {
+   "fieldname": "cy_address1",
+   "fieldtype": "Data",
+   "label": "Company Address 1"
+  },
+  {
+   "fieldname": "cy_address2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "cy_city",
+   "fieldtype": "Data",
+   "label": "City/Town"
+  },
+  {
+   "fieldname": "cy_pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "cy_phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "cy_email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "com_gstin",
+   "fieldtype": "Data",
+   "label": "GSTIN"
+  },
+  {
+   "fieldname": "com_statecode",
+   "fieldtype": "Data",
+   "label": "GST Statecode"
+  },
+  {
+   "fieldname": "com_rev_charge",
+   "fieldtype": "Data",
+   "label": "Reverse Charge"
+  },
+  {
+   "fieldname": "column_break_plil",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cr_address1",
+   "fieldtype": "Data",
+   "label": "Customer Address 1"
+  },
+  {
+   "fieldname": "cr_address2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "cr_city",
+   "fieldtype": "Data",
+   "label": "City/Town"
+  },
+  {
+   "fieldname": "cr_pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "cr_phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "cr_email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "cr_gstin",
+   "fieldtype": "Data",
+   "label": "GSTIN"
+  },
+  {
+   "fieldname": "com_gst_cat",
+   "fieldtype": "Data",
+   "label": "GST Category"
+  },
+  {
+   "fieldname": "cr_statecode",
+   "fieldtype": "Data",
+   "label": "Statecode"
+  },
+  {
+   "fieldname": "column_break_uuhb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ce_address1",
+   "fieldtype": "Data",
+   "label": "Consignee Address 1"
+  },
+  {
+   "fieldname": "ce_address2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "ce_city",
+   "fieldtype": "Data",
+   "label": "City/Town"
+  },
+  {
+   "fieldname": "ce_pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "ce_phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "ce_email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "ce_gstin",
+   "fieldtype": "Data",
+   "label": "GSTIN"
+  },
+  {
+   "fieldname": "ce_statecode",
+   "fieldtype": "Data",
+   "label": "Statecode"
+  },
+  {
+   "fieldname": "lr_status",
+   "fieldtype": "Data",
+   "label": "LR status"
+  },
+  {
+   "fieldname": "rdc_add_city",
+   "fieldtype": "Data",
+   "label": "RDC"
+  },
+  {
+   "fieldname": "section_break_zndo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-24 22:49:05.459961",
+ "modified_by": "Administrator",
+ "module": "Transaction",
+ "name": "Invoice",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

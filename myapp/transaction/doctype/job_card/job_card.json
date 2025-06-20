@@ -1,0 +1,368 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-02-24 22:13:47.575063",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_phir",
+  "company",
+  "column_break_thuh",
+  "date",
+  "column_break_n3pc",
+  "fy",
+  "section_break_lrn9",
+  "customer",
+  "delivery_date",
+  "excess",
+  "column_break_kl2y",
+  "order_no",
+  "enquiry_no",
+  "product",
+  "employee",
+  "column_break_ftsf",
+  "order_date",
+  "product_type",
+  "employee_code",
+  "column_break_xlnr",
+  "buyer_po_no",
+  "brand",
+  "completed",
+  "section_break_74gh",
+  "details",
+  "total_qty",
+  "rate",
+  "section_break_w71w",
+  "purchase_details",
+  "total_cost",
+  "section_break_yhw4",
+  "process_details",
+  "total_cost1",
+  "production_status",
+  "column_break_ror9",
+  "invoice_status",
+  "section_break_fnsu",
+  "image1",
+  "image_view1",
+  "column_break_482v",
+  "image2",
+  "image_view2",
+  "column_break_9qn9",
+  "image3",
+  "image_view3",
+  "section_break_nifo",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "default": "JB24.-.###",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "JBC.-.###\nJB24.-.###",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_phir",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_thuh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_n3pc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "company.cur_fy",
+   "fieldname": "fy",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Financial Year",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_lrn9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "order_no.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "order_no.delivery_date",
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "excess",
+   "fieldtype": "Check",
+   "label": "Excess"
+  },
+  {
+   "fieldname": "column_break_kl2y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "order_no",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Order No",
+   "mandatory_depends_on": "eval:doc.excess==0;",
+   "options": "Sales Order"
+  },
+  {
+   "fetch_from": "order_no.enquiry_no",
+   "fieldname": "enquiry_no",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Enquiry No",
+   "options": "Enquiry"
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "label": "Product",
+   "options": "Products",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "order_no.employee",
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_ftsf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "order_no.date",
+   "fieldname": "order_date",
+   "fieldtype": "Date",
+   "label": "Order Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "product_type",
+   "fieldtype": "Link",
+   "label": "Product Type",
+   "options": "Product Type",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "order_no.designation",
+   "fieldname": "employee_code",
+   "fieldtype": "Data",
+   "label": "Employee Code"
+  },
+  {
+   "fieldname": "column_break_xlnr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "order_no.order_no",
+   "fieldname": "buyer_po_no",
+   "fieldtype": "Data",
+   "label": "Buyer Po No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Brand",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "completed",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Completed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_74gh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Product Details",
+   "options": "Job Card Details"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fetch_from": "order_no.rate",
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "section_break_w71w",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "purchase_details",
+   "fieldtype": "Table",
+   "label": "Purchase Details",
+   "options": "Purchase Details"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "section_break_yhw4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "process_details",
+   "fieldtype": "Table",
+   "label": "Process Root",
+   "options": "Process Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_cost1",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "production_status",
+   "fieldtype": "Data",
+   "label": "Production Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ror9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "invoice_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Invoice Status",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_fnsu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach",
+   "label": "Image 1"
+  },
+  {
+   "fieldname": "image_view1",
+   "fieldtype": "Image",
+   "label": "Image View 1",
+   "options": "image1"
+  },
+  {
+   "fieldname": "column_break_482v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image2",
+   "fieldtype": "Attach",
+   "label": "Image 2"
+  },
+  {
+   "fieldname": "image_view2",
+   "fieldtype": "Image",
+   "label": "Image View 2",
+   "options": "image2"
+  },
+  {
+   "fieldname": "column_break_9qn9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image3",
+   "fieldtype": "Attach",
+   "label": "Image 3"
+  },
+  {
+   "fieldname": "image_view3",
+   "fieldtype": "Image",
+   "label": "Image View 3"
+  },
+  {
+   "fieldname": "section_break_nifo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-24 22:13:47.575063",
+ "modified_by": "Administrator",
+ "module": "Transaction",
+ "name": "Job Card",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

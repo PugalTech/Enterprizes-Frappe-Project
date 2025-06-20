@@ -1,0 +1,53 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"QQZAngJ5r7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Purchase</span>\",\"col\":12}},{\"id\":\"VUOnbj3S4v\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Order\",\"col\":3}},{\"id\":\"Dtddi0ACD5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Inward\",\"col\":3}},{\"id\":\"2FZPqQEQyZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Return\",\"col\":3}}]",
+ "creation": "2025-02-24 21:30:21.702261",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Purchase",
+ "links": [],
+ "modified": "2025-02-24 23:35:47.736574",
+ "modified_by": "Administrator",
+ "module": "Purchases",
+ "name": "Purchase",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 24.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Purchase Order",
+   "link_to": "Purchase Order",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Purchase Inward",
+   "link_to": "Purchase Inwards",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Purchase Return",
+   "link_to": "Purchase Returs",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Purchase"
+}

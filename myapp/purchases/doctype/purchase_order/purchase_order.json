@@ -1,0 +1,283 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-02-24 21:15:10.414348",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_ort7",
+  "company",
+  "column_break_zeku",
+  "date",
+  "column_break_xtrw",
+  "fy",
+  "section_break_75dm",
+  "supplier",
+  "item_group",
+  "brand",
+  "mobile_number",
+  "column_break_ndnu",
+  "item",
+  "due_date",
+  "employee_name",
+  "email",
+  "section_break_iymv",
+  "details",
+  "section_break_yl9q",
+  "total_qty",
+  "column_break_9yqk",
+  "total_amount",
+  "section_break_rjm1",
+  "remarks",
+  "image1",
+  "imageview1",
+  "image2",
+  "imageview2",
+  "column_break_y01d",
+  "oc_details",
+  "tax_details",
+  "sub_total",
+  "round_off",
+  "grand_total",
+  "section_break_idml",
+  "tax_cate",
+  "pi_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PO.-.###"
+  },
+  {
+   "fieldname": "column_break_ort7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_zeku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_xtrw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "company.cur_fy",
+   "fieldname": "fy",
+   "fieldtype": "Data",
+   "label": "Financial Year"
+  },
+  {
+   "fieldname": "section_break_75dm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Brand"
+  },
+  {
+   "fetch_from": "employee_name.phone",
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "column_break_ndnu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "default": "Today",
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_name.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "section_break_iymv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "Purchase Order Details"
+  },
+  {
+   "fieldname": "section_break_yl9q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "column_break_9yqk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "section_break_rjm1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach",
+   "label": "Image1"
+  },
+  {
+   "fieldname": "imageview1",
+   "fieldtype": "Image",
+   "label": "Imageview1",
+   "options": "image1"
+  },
+  {
+   "fieldname": "image2",
+   "fieldtype": "Attach Image",
+   "label": "Image2"
+  },
+  {
+   "fieldname": "imageview2",
+   "fieldtype": "Image",
+   "label": "Imageview2",
+   "options": "image2"
+  },
+  {
+   "fieldname": "column_break_y01d",
+   "fieldtype": "Column Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "oc_details",
+   "fieldtype": "Table",
+   "label": "Other Charges Details",
+   "options": "Purchase OC"
+  },
+  {
+   "fieldname": "tax_details",
+   "fieldtype": "Table",
+   "label": "Tax Details",
+   "options": "Purchase Order Tax Details"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total"
+  },
+  {
+   "fieldname": "round_off",
+   "fieldtype": "Currency",
+   "label": "Round Off"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total"
+  },
+  {
+   "fieldname": "section_break_idml",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fetch_from": "supplier.gst_category",
+   "fieldname": "tax_cate",
+   "fieldtype": "Data",
+   "label": "Tax Cate"
+  },
+  {
+   "default": "PI Pending",
+   "fieldname": "pi_status",
+   "fieldtype": "Select",
+   "label": "Purchase Inward Status",
+   "options": "PI Pending\nPI Completed",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-24 21:15:10.414348",
+ "modified_by": "Administrator",
+ "module": "Purchases",
+ "name": "Purchase Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
